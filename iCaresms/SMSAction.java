@@ -6,6 +6,7 @@ public class SMSAction extends OutgoingSMS{
         private String message;
         private String messageType;
 
+
     public SMSAction() {
     }
 
@@ -58,4 +59,3 @@ public class SMSAction extends OutgoingSMS{
                 '}';
     }
 }
-
