@@ -5,6 +5,8 @@ import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import org.yaml.snakeyaml.events.Event;
 
+import java.util.Map;
+
 @Service
 public class SMSService {
 
@@ -125,5 +127,10 @@ public class SMSService {
         queuedObject.put("event",eventQueued);
         queuedArray.put(queuedObject);
         return queuedArray.toString();
+    }
+
+    public String getParameterValue(Map<String, String[]> params, String paramName) {
+      String[] values = params.get(paramName);
+      return values != null && values.length > 0 ? values[0]:null;
     }
 }
