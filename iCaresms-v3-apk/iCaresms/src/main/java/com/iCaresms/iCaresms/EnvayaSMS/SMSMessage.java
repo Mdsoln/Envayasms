@@ -3,7 +3,7 @@ package com.iCaresms.iCaresms.EnvayaSMS;
 import jakarta.persistence.*;
 
 @Entity
-@Table( name = "envayasms")
+@Table( name = "incoming_sms")
 public class SMSMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
